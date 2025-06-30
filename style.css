@@ -1,0 +1,142 @@
+
+/* General layout for all the pages */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* main content (all pages) */
+.index-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.content-box {
+  max-width: 800px;
+  background-color: rgba(221, 235, 244, 0.674);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(107, 105, 105, 0.441);
+}
+
+/* image on homepage (index.html) */
+.intro-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+
+/* table styling (for history.html) ====== */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 90%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #555;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #477ec3;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+
+/* Navigation bar */
+#main-nav {
+  background-color: #477ec3;
+  padding: 10px;
+  color: white;
+  position: relative;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger menu (for smaller screens) */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+
+/* flex layout for nav links */
+.nav-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* nav link style */
+.nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* hover effect on nav links  */
+.nav-item:hover {
+  background-color: #a4c0d4bf;
+  border-radius: 4px;
+}
+
+
+/*  Navigation  */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-container {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-container {
+    display: flex;
+  }
+}
+
+
+/* footer (all pages) */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #477ec3;
+  color: white;
+  margin-top: 30px;
+}
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: #f0f0f0;
+}
+
