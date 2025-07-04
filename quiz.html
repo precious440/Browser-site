@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Self-Assesment Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation menu -->
+<nav id="main-nav">
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776; Menu</label>
+  <div class="nav-container">
+    <a href="index.html" class="nav-item">Home</a>
+    <a href="history.html" class="nav-item">History</a>
+    <a href="technology.html" class="nav-item">Features</a>
+    <a href="resources.html" class="nav-item">Resources</a>
+    <a href="quiz.html" class="nav-item">Quiz</a>
+  </div>
+</nav>
+
+<main>
+<div class="question">
+          <p><strong>1. Who created the first web browser?</strong></p>
+          <input type="radio" name="q1" value="a"> Steve Jobs<br>
+          <input type="radio" name="q1" value="b"> Bill Gates<br>
+          <input type="radio" name="q1" value="c" id="correct1"> Tim Berners-Lee<br>
+          <input type="radio" name="q1" value="d"> Mark Zuckerberg
+        </div>
+
+        <!-- Q2 -->
+        <div class="question">
+          <p><strong>2. What is the main job of a web browser?</strong></p>
+          <input type="radio" name="q2" value="a"> To build websites<br>
+          <input type="radio" name="q2" value="b"> To write documents<br>
+          <input type="radio" name="q2" value="c" id="correct2"> To display web pages for users<br>
+          <input type="radio" name="q2" value="d"> To play games
+        </div>
+
+        <!-- Q3 -->
+        <div class="question">
+          <p><strong>3. What does DNS do?</strong></p>
+          <input type="radio" name="q3" value="a"> Stores cookies<br>
+          <input type="radio" name="q3" value="b" id="correct3"> Finds the IP address for a website<br>
+          <input type="radio" name="q3" value="c"> Designs websites<br>
+          <input type="radio" name="q3" value="d"> Deletes search history
+        </div>
+
+        <!-- Q4 Fill in the Blank -->
+        <div class="question">
+          <p><strong>4. Fill in the blank: The first browser was called ______.</strong></p>
+          <input type="text" id="q4">
+        </div>
+
+        <!-- Q5 Multiple Select -->
+        <div class="question">
+          <p><strong>5. Which of the following are web browsers? (Select all that apply)</strong></p>
+          <input type="checkbox" name="q5" value="Chrome" id="correct5a"> Chrome<br>
+          <input type="checkbox" name="q5" value="Firefox" id="correct5b"> Firefox<br>
+          <input type="checkbox" name="q5" value="Edge" id="correct5c"> Edge<br>
+          <input type="checkbox" name="q5" value="Excel"> Excel
+        </div>
+
+        <!-- Buttons -->
+        <button type="button" class="btn" onclick="checkAnswers()">Submit</button>
+        <button type="reset" class="btn">Restart Quiz</button>
+      </form>
+
+      <div class="result" id="result"></div>
+
+    </div>
+  </main>
+
+<script>
+function checkAnswers() {
+  let score = 0;
+  let resultText = "";
+
+  // Q1
+  const q1 = document.querySelector('input[name="q1"]:checked');
+  if (q1 && q1.value === "c") {
+    score++;
+    resultText += "Q1: Correct!<br>";
+  } else {
+    resultText += "Q1: Incorrect (Answer: Tim Berners-Lee)<br>";
+  }
+
+  // Q2
+  const q2 = document.querySelector('input[name="q2"]:checked');
+  if (q2 && q2.value === "c") {
+    score++;
+    resultText += "Q2: Correct!<br>";
+  } else {
+    resultText += "Q2: Incorrect (Answer: To display web pages)<br>";
+  }
+
+  // Q3
+  const q3 = document.querySelector('input[name="q3"]:checked');
+  if (q3 && q3.value === "b") {
+    score++;
+    resultText += "Q3: Correct!<br>";
+  } else {
+    resultText += "Q3: Incorrect (Answer: Finds the IP address)<br>";
+  }
+
+  // Q4
+  const q4 = document.getElementById("q4").value.trim().toLowerCase();
+  if (q4 === "worldwideweb") {
+    score++;
+    resultText += "Q4: Correct!<br>";
+  } else {
+    resultText += "Q4: Incorrect (Answer: WorldWideWeb)<br>";
+  }
+
+  // Q5
+  const correct5 = ["Chrome", "Firefox", "Edge"];
+  let selected5 = [];
+  document.querySelectorAll('input[name="q5"]:checked').forEach(box => {
+    selected5.push(box.value);
+  });
+
+  let correct = selected5.every(val => correct5.includes(val)) && selected5.length === correct5.length;
+  if (correct) {
+    score++;
+    resultText += "Q5: Correct!<br>";
+  } else {
+    resultText += "Q5: Incorrect (Answer: Chrome, Firefox, Edge)<br>";
+  }
+
+  // Final Result
+  resultText += `<br>Total Score: ${score}/5<br>`;
+  resultText += score >= 3 ? "Yay, you Pass :)" : "Fail :(  but you can always try again)";
+  document.getElementById("result").innerHTML = resultText;
+}
+</script>
+
+</body>
+</html>
+
+</main>
