@@ -108,6 +108,8 @@ tr:hover {
 
 
 /*  Navigation  */
+/* Hide the nav links on small screens until the hamburger is clicked */
+
 @media screen and (max-width: 768px) {
   .menu-icon {
     display: block;
@@ -171,17 +173,30 @@ footer a:hover {
 }
 
 .result {
-  background-color: #eafaf1;
-  border: 1px solid #a4d6a7;
-  padding: 15px;
   margin-top: 20px;
-  border-radius: 6px;
-  color: #276740;
+  padding: 15px;
+  background-color: #eef6ff;
+  border-left: 5px solid #477ec3;
   font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
 }
 
+
+/* Quiz feedback colors */
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+
+
 /* section for smaller screens (phones) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 590px) {
   body {
     font-size: 14px;
   }
