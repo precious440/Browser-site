@@ -1,83 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Self-Assessment Quiz</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Self-Assessment Quiz</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-<!-- Navigation menu -->
-<nav id="main-nav">
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon">&#9776; Menu</label>
-  <div class="nav-container">
-    <a href="index.html" class="nav-item">Home</a>
-    <a href="history.html" class="nav-item">History</a>
-    <a href="technology.html" class="nav-item">Features</a>
-    <a href="resources.html" class="nav-item">Resources</a>
-    <a href="quiz.html" class="nav-item">Quiz</a>
-  </div>
-</nav>
-
-<main class="index-boxes">
-  <div class="content-box">
-    <h1>Self-Assessment Quiz</h1>
-
-    <form id="quiz-form">
-      <!-- Question 1 -->
-      <div class="question">
-        <p><strong>1. Who created the first web browser?</strong></p>
-        <input type="radio" name="q1" value="a"> Steve Jobs<br>
-        <input type="radio" name="q1" value="b"> Bill Gates<br>
-        <input type="radio" name="q1" value="c"> Tim Berners-Lee<br>
-        <input type="radio" name="q1" value="d"> Mark Zuckerberg<br>
+  <body>
+    <!-- Navigation menu -->
+    <nav id="main-nav">
+      <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for hamburger menu -->
+      <label for="menu-toggle" class="menu-icon">&#9776; Menu</label>
+      <div class="nav-container">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="history.html" class="nav-item">History</a>
+        <a href="technology.html" class="nav-item">Features</a>
+        <a href="resources.html" class="nav-item">Resources</a>
+        <a href="quiz.html" class="nav-item">Quiz</a>
       </div>
+    </nav>
 
-      <!-- Question 2 -->
-      <div class="question">
-        <p><strong>2. What is the main job of a web browser?</strong></p>
-        <input type="radio" name="q2" value="a"> To build websites<br>
-        <input type="radio" name="q2" value="b"> To write documents<br>
-        <input type="radio" name="q2" value="c"> To display web pages for users<br>
-        <input type="radio" name="q2" value="d"> To play games<br>
+    <!-- Main quiz content -->
+    <main class="index-boxes">
+      <div class="content-box">
+        <h1>Self-Assessment Quiz</h1>
+
+        <form id="quiz-form">
+
+          <!-- Question 1: Radio button -->
+          <div class="question">
+            <p><strong>1. Who created the first web browser?</strong></p>
+            <input type="radio" name="q1" value="a"> Steve Jobs<br>
+            <input type="radio" name="q1" value="b"> Bill Gates<br>
+            <input type="radio" name="q1" value="c"> Tim Berners-Lee<br>
+            <input type="radio" name="q1" value="d"> Mark Zuckerberg<br>
+          </div>
+
+          <!-- Question 2: Radio button -->
+          <div class="question">
+            <p><strong>2. What is the main job of a web browser?</strong></p>
+            <input type="radio" name="q2" value="a"> To build websites<br>
+            <input type="radio" name="q2" value="b"> To write documents<br>
+            <input type="radio" name="q2" value="c"> To display web pages for users<br>
+            <input type="radio" name="q2" value="d"> To play games<br>
+          </div>
+
+          <!-- Question 3: Radio button -->
+          <div class="question">
+            <p><strong>3. What does DNS do?</strong></p>
+            <input type="radio" name="q3" value="a"> Stores cookies<br>
+            <input type="radio" name="q3" value="b"> Finds the IP address for a website<br>
+            <input type="radio" name="q3" value="c"> Designs websites<br>
+            <input type="radio" name="q3" value="d"> Deletes search history<br>
+          </div>
+
+          <!-- Question 4: Text input -->
+          <div class="question">
+            <p><strong>4. Fill in the blank: The first browser was called ______.</strong></p>
+            <input type="text" id="q4">
+          </div>
+
+          <!-- Question 5: Multiple checkboxes -->
+          <div class="question">
+            <p><strong>5. Which of the following are web browsers? (Select all that apply)</strong></p>
+            <input type="checkbox" name="q5" value="Chrome"> Chrome<br>
+            <input type="checkbox" name="q5" value="Firefox"> Firefox<br>
+            <input type="checkbox" name="q5" value="Edge"> Edge<br>
+            <input type="checkbox" name="q5" value="Excel"> Excel<br>
+          </div>
+
+          <!-- Action Buttons -->
+          <button type="button" class="btn" onclick="checkAnswers()">Submit</button>
+          <button type="reset" class="btn">Restart Quiz</button>
+
+          <!-- Display area for quiz result -->
+          <div class="result" id="result"></div>
+        </form>
       </div>
+    </main>
 
-      <!-- Question 3 -->
-      <div class="question">
-        <p><strong>3. What does DNS do?</strong></p>
-        <input type="radio" name="q3" value="a"> Stores cookies<br>
-        <input type="radio" name="q3" value="b"> Finds the IP address for a website<br>
-        <input type="radio" name="q3" value="c"> Designs websites<br>
-        <input type="radio" name="q3" value="d"> Deletes search history<br>
-      </div>
-
-      <!-- Question 4 -->
-      <div class="question">
-        <p><strong>4. Fill in the blank: The first browser was called ______.</strong></p>
-        <input type="text" id="q4">
-      </div>
-
-      <!-- Question 5 -->
-      <div class="question">
-        <p><strong>5. Which of the following are web browsers? (Select all that apply)</strong></p>
-        <input type="checkbox" name="q5" value="Chrome"> Chrome<br>
-        <input type="checkbox" name="q5" value="Firefox"> Firefox<br>
-        <input type="checkbox" name="q5" value="Edge"> Edge<br>
-        <input type="checkbox" name="q5" value="Excel"> Excel<br>
-      </div>
-
-      <!-- Buttons -->
-      <button type="button" class="btn" onclick="checkAnswers()">Submit</button>
-      <button type="reset" class="btn">Restart Quiz</button>
-
-      <!-- Result Output -->
-      <div class="result" id="result"></div>
-    </form>
-  </div>
-</main>
-
-<!-- JavaScript -->
-<script src="quiz.js"></script>
-</body>
+    <!-- Link to JavaScript file that handles quiz logic -->
+    <script src="quiz.js"></script>
+  </body>
 </html>

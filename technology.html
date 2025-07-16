@@ -1,166 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Browser Features & Technology</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Browser Features & Technology</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-<!-- Navigation menu -->
-<nav id="main-nav">
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon">&#9776; Menu</label>
-  <div class="nav-container">
-    <a href="index.html" class="nav-item">Home</a>
-    <a href="history.html" class="nav-item">History</a>
-    <a href="technology.html" class="nav-item">Features</a>
-    <a href="resources.html" class="nav-item">Resources</a>
-    <a href="quiz.html" class="nav-item">Quiz</a>
+  <body>
+    <!-- Navigation menu -->
+    <nav id="main-nav">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776; Menu</label>
+      <div class="nav-container">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="history.html" class="nav-item">History</a>
+        <a href="technology.html" class="nav-item">Features</a>
+        <a href="resources.html" class="nav-item">Resources</a>
+        <a href="quiz.html" class="nav-item">Quiz</a>
+      </div>
+    </nav>
 
-  </div>
-</nav>
+    <main class="index-boxes">
+      <div class="content-box">
 
-<main class="index-boxes">
-  <div class="content-box">
+        <!-- Main title -->
+        <h1>How Web Browsers Work</h1>
 
-    <!-- Main title -->
-    <h1>How Web Browsers Work</h1>
+        <!-- Browser basics -->
+        <p>
+          To understand how this works in simple terms, the browser asks servers for web pages and services, and then it displays the HTML material it receives, which can include text, graphics, links, styles, and scripts. 
+        </p>
 
-    <!-- Browser basics -->
-    <p>
-      To understand how this works in simple terms, the browser asks servers for web pages and services, and then it displays the HTML material it receives, which can include text, graphics, links, styles, and scripts. 
-    </p>
+        <p>
+          The well-known browsers we use every day include <strong>Google Chrome</strong>, <strong>Safari</strong>, <strong>Mozilla Firefox</strong>, and <strong>Microsoft Edge</strong>. 
+          When accessing a website by typing in the URL, for example, <strong>Google.com</strong>, which is the short version of a full web address most people are familiar with, the browser starts a process in the background.
+        </p>
 
-    <p>
-      The well-known browsers we use every day include <strong>Google Chrome</strong>, <strong>Safari</strong>, <strong>Mozilla Firefox</strong>, and <strong>Microsoft Edge</strong>. 
-      When accessing a website by typing in the URL, for example, <strong>Google.com</strong>, which is the short version of a full web address most people are familiar with, the browser starts a process in the background.
-    </p>
+        <!-- List of DNS process -->
+        <ul>
+          <li>It contacts the <strong>DNS</strong> (Domain Name System) to translate the domain name into an IP address.</li>
+          <li>This step helps the browser find the website's data stored on a specific server.</li>
+        </ul>
 
-    <ul>
-      <li>It contacts the <strong>DNS</strong> (Domain Name System) to translate the domain name into an IP address.</li>
-      <li>This step helps the browser find the website's data stored on a specific server.</li>
-    </ul>
+        <p>
+          The browser then sends a request to the webserver to ask for the content. 
+          It uses the <strong>HTTP protocol</strong>, which sets the rules for how the data is sent and received between the browser and the server.
+        </p>
 
-    <p>
-      The browser then sends a request to the webserver to ask for the content. 
-      It uses the <strong>HTTP protocol</strong>, which sets the rules for how the data is sent and received between the browser and the server.
-    </p>
+        <p>
+          Once the browser receives the data, it translates it into a readable format using HTML. 
+          After that, the information is displayed on the screen so the user can interact with the website.
+        </p>
 
-    <p>
-      Once the browser receives the data, it translates it into a readable format using HTML. 
-      After that, the information is displayed on the screen so the user can interact with the website.
-    </p>
+        <!-- List of common interactions -->
+        <ul>
+          <li>Clicking links</li>
+          <li>Watching videos</li>
+          <li>Using search functions</li>
+        </ul>
 
-    <p>
-      This includes things like:
-      <ul>
-        <li>Clicking links</li>
-        <li>Watching videos</li>
-        <li>Using search functions</li>
-      </ul>
-    </p>
+        <p>
+          All of this happens quickly, but there are many steps happening behind the scenes just to load a single page. 
+          According to <strong>Mozilla</strong>, browsers are designed to handle and process large amounts of information efficiently so users can access websites smoothly and without delay. 
+          This highlights how important web browsers are in making the internet easy and fast to use.
+        </p>
 
-    <p>
-      All of this happens quickly, but there are many steps happening behind the scenes just to load a single page. 
-      According to <strong>Mozilla</strong>, browsers are designed to handle and process large amounts of information efficiently so users can access websites smoothly and without delay. 
-      This highlights how important web browsers are in making the internet easy and fast to use.
-    </p>
+        <!-- Inside the browser section -->
+        <h2>Inside the Browser</h2>
 
-    <!-- Inside the browser section -->
-    <h2>Inside the Browser</h2>
+        <p>
+          In addition to the basic functionality, web browsers consist of more advanced and complex software systems working behind the scenes. 
+          A web browser is made up of different components that perform specific tasks to ensure a smooth browsing experience.
+        </p>
 
-    <p>
-      In addition to the basic functionality, web browsers consist of more advanced and complex software systems working behind the scenes. 
-      A web browser is made up of different components that perform specific tasks to ensure a smooth browsing experience.
-    </p>
+        <!-- List of browser components -->
+        <ul>
+          <li><strong>User interface:</strong> the part users see, like the address bar, tabs, and navigation buttons.</li>
+          <li><strong>Browser engine:</strong> manages communication between the interface and the rendering engine.</li>
+          <li><strong>Rendering engine:</strong> displays the web content using HTML and other code.</li>
+          <li>Examples: <strong>Blink</strong> (used by Chrome and Edge), <strong>Gecko</strong> (used by Firefox).</li>
+        </ul>
 
-    <ul>
-      <li><strong>User interface:</strong> the part users see, like the address bar, tabs, and navigation buttons.</li>
-      <li><strong>Browser engine:</strong> manages communication between the interface and the rendering engine.</li>
-      <li><strong>Rendering engine:</strong> displays the web content using HTML and other code.</li>
-      <li>Examples: <strong>Blink</strong> (used by Chrome and Edge), <strong>Gecko</strong> (used by Firefox).</li>
-    </ul>
+        <p>Browsers also include:</p>
 
-    <p>
-      Browsers also include:
-    </p>
+        <ul>
+          <li><strong>JavaScript engine:</strong> runs scripts to handle user interactions.</li>
+          <li><strong>Networking component:</strong> handles connections to web servers and DNS lookups.</li>
+          <li><strong>Caching system:</strong> stores frequently used data for faster loading.</li>
+          <li><strong>Multi-process architecture:</strong> runs each tab separately to keep things stable.</li>
+        </ul>
 
-    <ul>
-      <li><strong>JavaScript engine:</strong> runs scripts to handle user interactions.</li>
-      <li><strong>Networking component:</strong> handles connections to web servers and DNS lookups.</li>
-      <li><strong>Caching system:</strong> stores frequently used data for faster loading.</li>
-      <li><strong>Multi-process architecture:</strong> runs each tab separately to keep things stable.</li>
-    </ul>
+        <p>
+          According to <strong>BrowserStack</strong>, modern browsers are built to ensure stability, speed, and security, which shows how far they’ve come from the early days.
+        </p>
 
-    <p>
-      According to <strong>BrowserStack</strong>, modern browsers are built to ensure stability, speed, and security, which shows how far they’ve come from the early days.
-    </p>
+        <!-- Security section -->
+        <h2>Browser Security and Privacy</h2>
 
-    <!-- Security section -->
-    <h2>Browser Security and Privacy</h2>
+        <p>
+          In practice, all of these web browsers have security features built in, which is one of the reasons users prefer them.
+        </p>
 
-    <p>
-      In practice, all of these web browsers have security features built in, which is one of the reasons users prefer them.
-    </p>
+        <p>
+          Lesser-known browsers such as <strong>Brave</strong>, <strong>DuckDuckGo</strong>, and <strong>Opera</strong> prioritize privacy, which is vital for many users, especially those who are knowledgeable about technology and cybersecurity.
+        </p>
 
-    <p>
-      Lesser-known browsers such as <strong>Brave</strong>, <strong>DuckDuckGo</strong>, and <strong>Opera</strong> prioritize privacy, which is vital for many users, especially those who are knowledgeable about technology and cybersecurity.
-    </p>
+        <!-- List of threats -->
+        <p>Modern browsers are designed to handle security threats like:</p>
+        <ul>
+          <li>Phishing attempts</li>
+          <li>Malicious websites</li>
+          <li>Sensitive data exposure</li>
+        </ul>
 
-    <p>
-      Modern browsers are designed to handle security threats like:
-      <ul>
-        <li>Phishing attempts</li>
-        <li>Malicious websites</li>
-        <li>Sensitive data exposure</li>
-      </ul>
-    </p>
+        <!-- List of protections -->
+        <p>To combat these threats, browsers use:</p>
+        <ul>
+          <li><strong>Sandboxing:</strong> keeps web pages from accessing other parts of the system.</li>
+          <li><strong>HTTPS:</strong> encrypts data between browser and server.</li>
+          <li><strong>Regular updates:</strong> fix newly found vulnerabilities.</li>
+        </ul>
 
-    <p>
-      To combat these threats, browsers use:
-      <ul>
-        <li><strong>Sandboxing:</strong> keeps web pages from accessing other parts of the system.</li>
-        <li><strong>HTTPS:</strong> encrypts data between browser and server.</li>
-        <li><strong>Regular updates:</strong> fix newly found vulnerabilities.</li>
-      </ul>
-    </p>
+        <p>By including these protections, browsers help make the internet safer for users.</p>
 
-    <p>
-      By including these protections, browsers help make the internet safer for users.
-    </p>
+        <!-- Future section -->
+        <h2>The Future of Browsers</h2>
 
-    <!-- Future section -->
-    <h2>The Future of Browsers</h2>
+        <p>
+          The future of web browsers seems to be heading in the direction of <strong>artificial intelligence</strong>, with features like smart assistants and predictive browsing becoming more common.
+        </p>
 
-    <p>
-      The future of web browsers seems to be heading in the direction of <strong>artificial intelligence</strong>, with features like smart assistants and predictive browsing becoming more common.
-    </p>
+        <p>
+          AI is changing how browsers work by making them more active in helping users, rather than just being tools to view websites. 
+          According to <strong>SideSpace</strong>, AI is turning browsers into proactive assistants that can:
+        </p>
 
-    <p>
-      AI is changing how browsers work by making them more active in helping users, rather than just being tools to view websites. 
-      According to <strong>SideSpace</strong>, AI is turning browsers into proactive assistants that can:
-      <ul>
-        <li>Summarize pages</li>
-        <li>Predict what users are looking for</li>
-        <li>Complete tasks through voice or text commands</li>
-      </ul>
-    </p>
+        <ul>
+          <li>Summarize pages</li>
+          <li>Predict what users are looking for</li>
+          <li>Complete tasks through voice or text commands</li>
+        </ul>
 
-    <p>
-      These features can make browsing faster and more convenient, but they also raise concerns about <strong>privacy</strong> and <strong>data control</strong>. 
-      The future of browsers may depend on how well they balance smart features with user trust.
-    </p>
+        <p>
+          These features can make browsing faster and more convenient, but they also raise concerns about <strong>privacy</strong> and <strong>data control</strong>. 
+          The future of browsers may depend on how well they balance smart features with user trust.
+        </p>
 
-  </div>
-</main>
+      </div>
+    </main>
 
+    <!-- Footer with project note -->
+    <footer>
+      <p>This website is a class project for IT 3203. Visit the 
+        <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">class website</a>.
+      </p>
+    </footer>
 
-<!-- Footer with project note -->
-<footer>
-  <p>This website is a class project for IT 3203. Visit the 
-      <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">class website</a>.</p>
-</footer>
-
-</body>
+  </body>
 </html>
