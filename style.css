@@ -194,7 +194,6 @@ footer a:hover {
 }
 
 
-
 /* section for smaller screens (phones) */
 @media screen and (max-width: 590px) {
   body {
@@ -206,32 +205,47 @@ footer a:hover {
     margin: 10px;
   }
 
+  /* navigation container stacked vertically with spacing */
   .nav-container {
+    display: none; /* hide by default, show only when hamburger toggled */
     flex-direction: column;
-    gap: 10px;
+    gap: 12px; /* slight gap for readability */
+    margin-top: 10px;
   }
 
+  /* this shows nav-container when menu-toggle is checked in like hamburger style */
+  #menu-toggle:checked + .menu-icon + .nav-container {
+    display: flex;
+  }
+
+  /* nav links styling */
   .nav-item {
     padding: 8px;
     text-align: center;
+    width: 100%; /* full width so they’re easy to tap */
   }
 
+  /* buttons (including dark mode toggle) full width for easier touch */
+  .btn {
+    width: 100%;
+    margin-top: 8px; /* add some spacing above buttons */
+  }
+
+  /* table styling */
   table {
     font-size: 13px;
     width: 100%;
   }
 
+  /* inputs full width for mobile */
   input[type="text"],
   input[type="radio"],
   input[type="checkbox"] {
     width: 100%;
     margin-bottom: 10px;
   }
-
-  .btn {
-    width: 100%;
-  }
 }
+
 
 /* Medium screens (tablets)  */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
@@ -267,4 +281,48 @@ footer a:hover {
   padding: 15px;
   margin: 20px 0;
   border-radius: 6px;
+}
+
+/* Light/Dark Theme Support */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark .content-box {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark th {
+  background-color: #333;
+}
+
+body.dark tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+body.dark .nav-container .nav-item {
+  color: white;
+}
+
+body.dark .nav-item:hover {
+  background-color: #333;
+}
+
+body.dark .result {
+  background-color: #1c2939;
+  border-left: 5px solid #88b3d4;
+}
+
+.theme-toggle {
+  margin-left: 10px;
+  background-color: #ddd;
+  color: #333;
+  font-weight: bold;
+}
+
+body.dark .theme-toggle {
+  background-color: #444;
+  color: #f0f0f0;
 }

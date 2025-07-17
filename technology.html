@@ -8,15 +8,22 @@
 
   <body>
     <!-- Navigation menu -->
+     <!-- Navigation Bar with hamburger menu for mobile -->
     <nav id="main-nav">
-      <input type="checkbox" id="menu-toggle">
+      <input type="checkbox" id="menu-toggle">  <!--Hidden checkbox for menu-->
+
+      <!--Hamburger icon for menu-->
       <label for="menu-toggle" class="menu-icon">&#9776; Menu</label>
+
+      <!--Navigation bar links-->
       <div class="nav-container">
         <a href="index.html" class="nav-item">Home</a>
         <a href="history.html" class="nav-item">History</a>
         <a href="technology.html" class="nav-item">Features</a>
-        <a href="resources.html" class="nav-item">Resources</a>
+        <a href="resources.html" class="nav-item">References</a>
         <a href="quiz.html" class="nav-item">Quiz</a>
+        <button class="btn theme-toggle" onclick="toggleTheme()"> Dark Mode</button> <!--extra for dark mode-->
+
       </div>
     </nav>
 
@@ -155,6 +162,7 @@
         <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">class website</a>.
       </p>
     </footer>
+    <script src="theme.js"></script>
 
   </body>
 </html>
